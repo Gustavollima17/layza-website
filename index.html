@@ -65,10 +65,10 @@
     <button class="btn btn-yes" onclick="showYesPage()">Sim</button>
     <button class="btn btn-no" id="noBtn" onclick="moveButton()">Não</button>
 
-    <audio controls>
-    <source src="audio/tim_maia_eu_amo_voce.mp3" type="audio/mp3">
-</audio>
-
+    <video id="video" controls width="320" height="240">
+        <source src="<iframe width="560" height="315" src="https://www.youtube.com/embed/qBBwXuEV4jA?si=NLs7cNAfn4Jg7QOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>.mp4" type="video/mp4">
+    </video>
+  
 <button onclick="document.getElementById('musica').play()">Tocar Música</button>
     <script>
         let noBtn = document.getElementById('noBtn');
