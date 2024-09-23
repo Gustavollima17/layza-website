@@ -52,10 +52,6 @@
             margin-top: 30px;
             color: #8b008b;
         }
-
-        audio {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -65,11 +61,12 @@
     <button class="btn btn-yes" onclick="showYesPage()">Sim</button>
     <button class="btn btn-no" id="noBtn" onclick="moveButton()">Não</button>
 
+    <!-- Substituindo o áudio pelo vídeo -->
     <video id="video" controls width="320" height="240">
-        <source src="<iframe width="560" height="315" src="https://www.youtube.com/embed/qBBwXuEV4jA?si=NLs7cNAfn4Jg7QOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>.mp4" type="video/mp4">
+        <source src="seu_video.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
     </video>
-  
-<button onclick="document.getElementById('musica').play()">Tocar Música</button>
+
     <script>
         let noBtn = document.getElementById('noBtn');
 
@@ -84,11 +81,11 @@
         function showYesPage() {
             document.body.innerHTML = `
                 <h1>Que maravilha, Láysa!</h1>
-                <p>Estou muito feliz por você ter aceitado me conhecer! Tenho certeza de que a gente vai se dar muito bem.</p>
-                <p>Ah, e eu escolhi uma música especial para esse momento, porque... <strong>Eu amo você!</strong> (Tim Maia)</p>
-                <audio controls autoplay>
-                    <source src="tim_maia_eu_amo_voce.mp3" type="audio/mp3">
-                </audio>
+                <p>Estou muito feliz por você ter aceitado me conhecer! Vamos assistir algo juntos.</p>
+                <video controls autoplay width="640" height="360">
+                    <source src="seu_video.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
             `;
         }
     </script>
