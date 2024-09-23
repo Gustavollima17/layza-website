@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quero te conhecer, Láysa Everton!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: #ff69b4;
+        }
+
+        p {
+            font-size: 20px;
+            color: #ff1493;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            margin: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-yes {
+            background-color: #32cd32;
+            color: white;
+        }
+
+        .btn-no {
+            background-color: #ff4500;
+            color: white;
+            position: relative;
+        }
+
+        .btn-no:hover {
+            background-color: #ff6347;
+        }
+
+        #hiddenMessage {
+            display: none;
+            font-size: 24px;
+            margin-top: 30px;
+            color: #8b008b;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oi Láysa Everton!</h1>
+    <p>Eu adoraria te conhecer. Você quer me dar essa chance?</p>
+    
+    <button class="btn btn-yes" onclick="showYesPage()">Sim</button>
+    <button class="btn btn-no" id="noBtn" onclick="moveButton()">Não</button>
+
+    <audio id="music" controls autoplay>
+        <source src="tim_maia_eu_amo_voce.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        let noBtn = document.getElementById('noBtn');
+
+        function moveButton() {
+            let x = Math.random() * 300;
+            let y = Math.random() * 300;
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+
+        function showYesPage() {
+            document.body.innerHTML = `
+                <h1>Que maravilha, Láysa!</h1>
+                <p>Estou muito feliz por você ter aceitado me conhecer! Tenho certeza de que a gente vai se dar muito bem.</p>
+                <p>Ah, e eu escolhi uma música especial para esse momento, porque... <strong>Eu amo você!</strong> (Tim Maia)</p>
+                <audio controls autoplay>
+                    <source src="tim_maia_eu_amo_voce.mp3" type="audio/mp3">
+                </audio>
+            `;
+        }
+    </script>
+</body>
+</html>
