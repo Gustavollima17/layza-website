@@ -65,9 +65,12 @@
     <button class="btn btn-yes" onclick="showYesPage()">Sim</button>
     <button class="btn btn-no" id="noBtn" onclick="moveButton()">Não</button>
 
-    <audio id="music" controls autoplay>
-        <source src="tim_maia_eu_amo_voce.mp3" type="audio/mp3">
-    </audio>
+    <audio id="musica" controls>
+    <source src="tim_maia_eu_amo_voce.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<button onclick="document.getElementById('musica').play()">Tocar Música</button>
 
     <script>
         let noBtn = document.getElementById('noBtn');
